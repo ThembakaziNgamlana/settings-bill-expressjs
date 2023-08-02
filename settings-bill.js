@@ -76,12 +76,7 @@ module.exports = function SettingsBill() {
         }
         return total;
 
-        // the short way using reduce and arrow functions
-
-        // return actionList.reduce((total, action) => { 
-        //     let val = action.type === type ? action.cost : 0;
-        //     return total + val;
-        // }, 0);
+      
     }
 
     function grandTotal() {
@@ -104,6 +99,7 @@ module.exports = function SettingsBill() {
             && total < criticalLevel;
 
         return reachedWarningLevel;
+       
     }
 
     function hasReachedCriticalLevel(){
@@ -117,6 +113,8 @@ module.exports = function SettingsBill() {
         recordAction,
         actions,
         actionsFor,
+        getTotal, // Add getTotal function to the returned object
+        grandTotal,
         totals,
         hasReachedWarningLevel,
         hasReachedCriticalLevel
