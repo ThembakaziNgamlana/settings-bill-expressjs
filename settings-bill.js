@@ -1,4 +1,4 @@
-module.exports = function SettingsBill() {
+export default function SettingsBill() {
 
     let smsCost;
     let callCost;
