@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
-  "license": "AGPL-version-3.0",
+ "license": "AGPL-version-3.0",
   "private": false,
   "engines": {
     "node": ">= 14.0.0",
@@ -27,6 +26,7 @@
     "dev": "",
     "test": ""
   },
+  "type": "module",
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2",

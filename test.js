@@ -1,6 +1,6 @@
-const assert = require('assert');
-const { expect } = require('chai'); 
-const SettingsBill = require('./settings-bill');
+const assert = import('assert');
+const { expect } = import('chai'); 
+const SettingsBill =import('./settings-bill');
 
 describe('SettingsBill', function () {
   let settingsBill;

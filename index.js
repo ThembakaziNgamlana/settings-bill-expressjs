@@ -1,7 +1,7 @@
-const express = require('express');
-const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
-const SettingsBill = require('./settings-bill');
+import express from 'express';
+import exphbs from 'express-handlebars';
+import bodyParser from 'body-parser';
+import SettingsBill from 'settings-bill.js'
 
 const app = express();
 const settingsBill = SettingsBill();
@@ -57,12 +57,12 @@ app.get('/actions', function(req, res){
 
 
 app.get('/actions/:type', function(req, res){
-  const actionType = req.params.actionType;
+  const actionType = req.params.actionype;
  res.render('actions',{actions: settingsBill.actionsFor(actionType) });
 
 });
 
-const PORT = process.env.PORT || 3011;
+const PORT = process.env.PORT || 3011
 
 
 app.listen(PORT, function () {
