@@ -1,7 +1,7 @@
 import express from 'express';
 import exphbs from 'express-handlebars';
 import bodyParser from 'body-parser';
-import SettingsBill from 'settings-bill.js'
+import SettingsBill from './settings-bill.js'
 
 const app = express();
 const settingsBill = SettingsBill();
