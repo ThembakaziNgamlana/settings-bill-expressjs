@@ -108,10 +108,10 @@ export default function SettingsBill() {
     }
 
   function levelsCheck(){
-    if(hasReachedWarningLevel()) {
-        return "warning";
-    } else if (hasReachedCriticalLevel())
-    return "danger";
+    if(hasReachedCriticalLevel())  {
+        return "danger";
+    } else if (hasReachedWarningLevel())
+    return "warning";
   }
   
 
