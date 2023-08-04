@@ -16,6 +16,7 @@ const hbs = exphbs.create({
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
+
 // Set the views directory
 app.set('views', './views');
 
@@ -28,7 +29,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', function (req, res) {
   res.render('index', { 
     settings: settingsBill.getSettings(),
-    totals: settingsBill.totals()
+    totals: settingsBill.totals(),
+    LevelsCheck: settingsBill.levelsCheck()
   });
 });
 
@@ -57,7 +59,7 @@ app.get('/actions', function(req, res){
 
 
 app.get('/actions/:type', function(req, res){
-  const actionType = req.params.actionype;
+  const actionType = req.params.type;
  res.render('actions',{actions: settingsBill.actionsFor(actionType) });
 
 });

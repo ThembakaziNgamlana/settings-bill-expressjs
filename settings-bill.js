@@ -107,8 +107,21 @@ export default function SettingsBill() {
         return total >= criticalLevel;
     }
 
+  function levelsCheck(){
+    if(hasReachedWarningLevel()) {
+        return "warning";
+    } else if (hasReachedCriticalLevel())
+    return "danger";
+  }
+  
+
+
+
+
+
     return {
         setSettings,
+        levelsCheck,
         getSettings,
         recordAction,
         actions,
