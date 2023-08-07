@@ -74,7 +74,7 @@ export default function SettingsBill() {
                 total += action.cost;
             }
         }
-        return total.toFixed(2);
+        return  isNaN(total)? '0.00' : total.toFixed(2);
 
       
     }
