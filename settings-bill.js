@@ -23,22 +23,22 @@ export default function SettingsBill() {
             criticalLevel
         }
     }
-
     function recordAction(action) {
+        if (!hasReachedCriticalLevel()) {
+            let cost = 0;
+            if (action === 'sms'){
+                cost = smsCost;
+            }
+            else if (action === 'call'){
+                cost = callCost;
+            }
 
-        let cost = 0;
-        if (action === 'sms'){
-            cost = smsCost;
+            actionList.push({
+                type: action,
+                cost,
+                timestamp: new Date()
+            });
         }
-        else if (action === 'call'){
-            cost = callCost;
-        }
-
-        actionList.push({
-            type: action,
-            cost,
-            timestamp: new Date()
-        });
     }
 
     function actions(){
@@ -74,7 +74,7 @@ export default function SettingsBill() {
                 total += action.cost;
             }
         }
-        return total;
+        return total.toFixed(2);
 
       
     }
@@ -114,7 +114,7 @@ export default function SettingsBill() {
     return "warning";
   }
   
-
+ 
 
 
 

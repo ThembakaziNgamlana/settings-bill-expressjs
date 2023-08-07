@@ -46,19 +46,19 @@
                       <td>
                         <a href="/actions/call">Call total</a>
                       </td>
-                      <td>R<span class="callTotalSettings">{{totals.callTotal}}</span> </td>
+                      <td>R<span class="callTotalSettings">{{totals.callTotal.toFixed(2)}}</span> </td>
                     </tr>
                     <tr>
                       <td>
                         <a href="/actions/sms">SMS total</a>
                       </td>
-                      <td>R<span class="smsTotalSettings">{{totals.smsTotal}}</span> </td>
+                      <td>R<span class="smsTotalSettings">{{totals.smsTotal.toFixed(2)}}</span> </td>
                     </tr>
                     <tr>
                       <td>
                         <a href="/actions">Total</a>
                       </td>
-                      <td class=""> R<span class="totalSettings {{levelsCheck}}">{{totals.grandTotal}}</span> </td>
+                      <td class=""> R<span class="totalSettings {{levelsCheck}}">{{totals.grandTotal.toFixed(2)}}</span> </td>
                     </tr>
                   </table>
 

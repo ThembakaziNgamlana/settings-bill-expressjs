@@ -6,13 +6,13 @@
   <tr>
   <th>Type</th>
   <th>Price</th>
-  <th>When</th>
+  <th>Time</th>
   </tr>
   {{#each actions}}
   <tr>
     <td>{{type}}</td>
     <td>{{cost}}</td>
-    <td>{{timestamp}}</td>
+    <td>{{formatTime timestamp}}</td>
   </tr>
   {{/each}}
 </table>
