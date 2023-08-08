@@ -70,17 +70,15 @@ export default function SettingsBill() {
 
         return filteredActions;
 
-        // return actionList.filter((action) => action.type === type);
+        
     }
 
     function getTotal(type) {
         let total = 0;
-        // loop through all the entries in the action list 
+        
         for (let index = 0; index < actionList.length; index++) {
             const action = actionList[index];
-            // check this is the type we are doing the total for 
             if (action.type === type) {
-                // if it is add the total to the list
                 total += action.cost;
             }
         }
