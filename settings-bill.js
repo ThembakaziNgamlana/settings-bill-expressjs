@@ -14,6 +14,16 @@ export default function SettingsBill() {
         criticalLevel = settings.criticalLevel;
     }
 
+    function reset(){
+        smsCost = ''; 
+        callCost = ''; 
+        warningLevel = ''; 
+        criticalLevel = '';
+        actionList = [];
+    
+
+    }
+
     function getSettings
     () {
         return {
@@ -123,6 +133,7 @@ export default function SettingsBill() {
         setSettings,
         levelsCheck,
         getSettings,
+        reset,
         recordAction,
         actions,
         actionsFor,

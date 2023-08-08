@@ -6,7 +6,22 @@ import SettingsBill from './settings-bill.js'
 const app = express();
 const settingsBill = SettingsBill();
 
-// Create an instance of express-handlebars with the required configuration
+
+app.post('/reset', function (req, res) {
+  settingsBill.reset();
+
+  // Update levelsCheck based on current total
+  const updatedLevelsCheck = settingsBill.levelsCheck();
+  
+  res.render('index', {
+    settings: settingsBill.getSettings(),
+    totals: settingsBill.totals(),
+    
+  });
+});
+
+
+
 const hbs = exphbs.create({
   extname: '.hbs',
   defaultLayout: false,
